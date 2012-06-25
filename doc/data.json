@@ -1,0 +1,804 @@
+{
+    "project": {},
+    "files": {
+        "src/etsyapi.js": {
+            "name": "src/etsyapi.js",
+            "modules": {
+                "etsy-api": 1
+            },
+            "classes": {
+                "Etsy": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "etsy-api": {
+            "name": "etsy-api",
+            "submodules": {},
+            "classes": {
+                "Etsy": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/etsyapi.js",
+            "line": 100,
+            "description": "A module for interacting with the etsy public API"
+        }
+    },
+    "classes": {
+        "Etsy": {
+            "name": "Etsy",
+            "shortname": "Etsy",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "etsy-api",
+            "namespace": "",
+            "file": "src/etsyapi.js",
+            "line": 100,
+            "description": "The ETSY API endpoint.",
+            "contructor": "",
+            "params": [
+                {
+                    "name": "apiKey",
+                    "description": "The Etsy API key to use",
+                    "type": "String"
+                }
+            ]
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/etsyapi.js",
+            "line": 112,
+            "itemtype": "property",
+            "name": "_apiKey  The API key",
+            "type": "String",
+            "access": "private",
+            "tagname": "",
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 118,
+            "itemtype": "property",
+            "name": "_detailLevel  The default detail level",
+            "type": "String",
+            "access": "private",
+            "tagname": "",
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 124,
+            "itemtype": "method",
+            "name": "api",
+            "params": [
+                {
+                    "name": "p",
+                    "description": "The GET path to the etsy API call",
+                    "type": "String"
+                },
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback function/object",
+                    "type": "Function|Object"
+                },
+                {
+                    "name": "useDetailLevel",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 162,
+            "itemtype": "method",
+            "name": "setDetailLevel",
+            "params": [
+                {
+                    "name": "detailLevel",
+                    "description": "The new detail level, one of \"low\", \"medium\", or \"high\"",
+                    "type": "String"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 180,
+            "itemtype": "method",
+            "name": "user_getUserDetails",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object\n\n* **user_id** - Required. The user ID of the details to get",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 196,
+            "itemtype": "method",
+            "name": "user_getUsersByName",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object\n\n* **search_name** - The search query to run.",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 218,
+            "itemtype": "method",
+            "name": "shop_getShopDetails",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 231,
+            "itemtype": "method",
+            "name": "shop_getShopListings",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 244,
+            "itemtype": "method",
+            "name": "shop_getFeaturedDetails",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 257,
+            "itemtype": "method",
+            "name": "shop_getFeaturedSellers",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 267,
+            "itemtype": "method",
+            "name": "shop_getShopDetails",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 286,
+            "itemtype": "method",
+            "name": "listing_getListingDetails",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 299,
+            "itemtype": "method",
+            "name": "listing_getAllListings",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 309,
+            "itemtype": "method",
+            "name": "listing_getListingsByCategory",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 322,
+            "itemtype": "method",
+            "name": "listing_getListingsByColor",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 341,
+            "itemtype": "method",
+            "name": "listing_getListingsByColorAndKeywords",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 366,
+            "itemtype": "method",
+            "name": "listing_getFrontFeaturedListings",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 376,
+            "itemtype": "method",
+            "name": "listing_getListingsByKeyword",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 392,
+            "itemtype": "method",
+            "name": "listing_getListingsByMaterials",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 408,
+            "itemtype": "method",
+            "name": "listing_getListingsByTags",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 430,
+            "itemtype": "method",
+            "name": "feedback_getFeedback",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 443,
+            "itemtype": "method",
+            "name": "feedback_getFeedbackForUser",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 456,
+            "itemtype": "method",
+            "name": "feedback_getFeedbackAsBuyer",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 469,
+            "itemtype": "method",
+            "name": "feedback_getFeedbackForOthers",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 482,
+            "itemtype": "method",
+            "name": "feedback_getFeedbackAsSeller",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 501,
+            "itemtype": "method",
+            "name": "category_getTopCategories",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 511,
+            "itemtype": "method",
+            "name": "category_getChildCategories",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 524,
+            "itemtype": "method",
+            "name": "tag_getTopTags",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 534,
+            "itemtype": "method",
+            "name": "tag_getChildTags",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 553,
+            "itemtype": "method",
+            "name": "favorites_getFavorersOfListing",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 566,
+            "itemtype": "method",
+            "name": "favorites_getFavorersOfShop",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 579,
+            "itemtype": "method",
+            "name": "favorites_getFavoriteListingsOfUser",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 592,
+            "itemtype": "method",
+            "name": "favorites_getFavoriteShopsOfUser",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 611,
+            "itemtype": "method",
+            "name": "giftguide_getGiftGuides",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 621,
+            "itemtype": "method",
+            "name": "giftguide_getGiftGuideListings",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 640,
+            "itemtype": "method",
+            "name": "server_getMethodTable",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 650,
+            "itemtype": "method",
+            "name": "server_getServerEpoch",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        },
+        {
+            "file": "src/etsyapi.js",
+            "line": 660,
+            "itemtype": "method",
+            "name": "server_ping",
+            "params": [
+                {
+                    "name": "o",
+                    "description": "The arguments object",
+                    "type": "Object"
+                },
+                {
+                    "name": "c",
+                    "description": "The callback object/function",
+                    "type": "Function|Object"
+                }
+            ],
+            "class": "Etsy",
+            "module": "etsy-api"
+        }
+    ]
+}
