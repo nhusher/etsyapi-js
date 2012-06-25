@@ -180,6 +180,9 @@ A module for interacting with the etsy public API
         /**
         @method user_getUserDetails
         @param o {Object} The arguments object
+        
+        * **user_id** - Required. The user ID of the details to get
+        
         @param c {Function|Object} The callback object/function
         **/
         user_getUserDetails: function(o,c) {
@@ -193,6 +196,9 @@ A module for interacting with the etsy public API
         /**
         @method user_getUsersByName
         @param o {Object} The arguments object
+        
+        * **search_name** - The search query to run.
+        
         @param c {Function|Object} The callback object/function
         **/
         user_getUsersByName: function(o,c) {
