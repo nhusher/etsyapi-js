@@ -210,7 +210,7 @@ A module for interacting with the etsy public API
         */
         
         /**
-        @method user_getShopDetails
+        @method shop_getShopDetails
         @param o {Object} The arguments object
         @param c {Function|Object} The callback object/function
         **/
@@ -221,6 +221,12 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c);
         },
+        
+        /**
+        @method shop_getShopListings
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         shop_getShopListings: function(o,c) {
             if(!o.user_id) { throw "user_id null or undefined."; }
             var path = "shops/" + o.user_id + "/listings";
@@ -228,6 +234,12 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c)
         },
+        
+        /**
+        @method shop_getFeaturedDetails
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         shop_getFeaturedDetails: function(o,c) {
             if(!o.user_id) { throw "user_id null or undefined."; }
             var path = "shops/" + o.user_id + "/listings/featured";
@@ -235,10 +247,22 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c)
         },
+        
+        /**
+        @method shop_getFeaturedSellers
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         shop_getFeaturedSellers: function(o,c) {
             var path = "shops/featured";            
             this.api(path, o, c)
         },
+        
+        /**
+        @method shop_getShopDetails
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         shop_getShopsByName: function(o,c) {
             if(!o.search_name) { throw "search_name null or undefined."; }
             var path = "shops/keywords/" + o.search_name;
@@ -246,11 +270,18 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c);
         },
+        
         /*
         =====================================================================
         Listing Commands
         =====================================================================
         */
+        
+        /**
+        @method listing_getListingDetails
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         listing_getListingDetails: function(o,c) {
             if(!o.listing_id) { throw "listing_id null or undefined."; }
             var path = "listings/" + o.listing_id;
@@ -258,10 +289,22 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c);
         },
+        
+        /**
+        @method listing_getAllListings
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         listing_getAllListings: function(o,c) {
             var path = "listings/all";
             this.api(path, o, c);           
         },
+        
+        /**
+        @method listing_getListingsByCategory
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         listing_getListingsByCategory: function(o,c) {
             if(!o.category) { throw "category null or undefined."; }
             var path = "listings/category/" + o.category;
@@ -269,6 +312,12 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c);
         },
+        
+        /**
+        @method listing_getListingsByColor
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         listing_getListingsByColor: function(o,c) {
             if(!o.color) { throw "color null or undefined."; }
             if(jQuery.isArray(o.color)) {
@@ -282,6 +331,12 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c);           
         },
+        
+        /**
+        @method listing_getListingsByColorAndKeywords
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         listing_getListingsByColorAndKeywords: function(o,c) {
             if(!o.color) { throw "color null or undefined."; }
             if(!o.search_terms) { throw "search_terms null or undefined."; }
@@ -301,10 +356,22 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c);           
         },
+        
+        /**
+        @method listing_getFrontFeaturedListings
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         listing_getFrontFeaturedListings: function(o,c) {
             var path = "listings/featured/front";
             this.api(path, o, c);
         },
+        
+        /**
+        @method listing_getListingsByKeyword
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         listing_getListingsByKeyword: function(o,c) {
             if(!o.search_terms) { throw "search_terms null or undefined."; }
             if(jQuery.isArray(o.search_terms)) {
@@ -315,6 +382,12 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c);
         },
+        
+        /**
+        @method listing_getListingsByMaterials
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         listing_getListingsByMaterials: function(o,c) {
             if(!o.materials) { throw "materials null or undefined."; }
             if(jQuery.isArray(o.materials)) {
@@ -325,6 +398,12 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c);
         },
+        
+        /**
+        @method listing_getListingsByTags
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         listing_getListingsByTags: function(o,c) {
             if(!o.tags) { throw "tags null or undefined."; }
             if(jQuery.isArray(o.tags)) {
@@ -335,11 +414,18 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c);
         },
+        
         /*
         =====================================================================
         Feedback Commands
         =====================================================================
         */
+        
+        /**
+        @method feedback_getFeedback
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         feedback_getFeedback: function(o,c) {
             if(!o.feedback_id) { throw "feedback_id null or undefined."; }
             var path = "feedback/" + o.feedback_id;
@@ -347,6 +433,12 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c, false);
         },
+
+        /**
+        @method feedback_getFeedbackForUser
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         feedback_getFeedbackForUser: function(o,c) {
             if(!o.user_id) { throw "user_id null or undefined."; }
             var path = "users/" + o.user_id + "/feedback";
@@ -354,6 +446,12 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c, false);
         },
+        
+        /**
+        @method feedback_getFeedbackAsBuyer
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         feedback_getFeedbackAsBuyer: function(o,c) {
             if(!o.user_id) { throw "user_id null or undefined."; }
             var path = "users/" + o.user_id + "/feedback/buyer";
@@ -361,6 +459,12 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c, false);
         },
+        
+        /**
+        @method feedback_getFeedbackForOthers
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         feedback_getFeedbackForOthers: function(o,c) {
             if(!o.user_id) { throw "user_id null or undefined."; }
             var path = "users/" + o.user_id + "/feedback/others";
@@ -368,6 +472,12 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c, false);
         },
+        
+        /**
+        @method feedback_getFeedbackAsSeller
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         feedback_getFeedbackAsSeller: function(o,c) {
             if(!o.user_id) { throw "user_id null or undefined."; }
             var path = "users/" + o.user_id + "/feedback/seller";
@@ -375,15 +485,28 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c, false);
         },
+        
         /*
         =====================================================================
         Tag and Category Commands
         =====================================================================
         */
+        
+        /**
+        @method category_getTopCategories
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         category_getTopCategories: function(o,c) {
             var path = "categories";
             this.api(path, o, c, false);
         },
+        
+        /**
+        @method category_getChildCategories
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         category_getChildCategories: function(o,c) {
             if(!o.category) { throw "category null or undefined."; }
             var path = "categories/" + o.category + "/children";
@@ -391,10 +514,22 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c, false);
         },
+        
+        /**
+        @method tag_getTopTags
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         tag_getTopTags: function(o,c) {
             var path = "tags";
             this.api(path, o, c, false);
         },
+        
+        /**
+        @method tag_getChildTags
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         tag_getChildTags: function(o,c) {
             if(!o.tag) { throw "tag null or undefined."; }
             var path = "tags/" + o.tag + "/children";
@@ -402,11 +537,18 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c, false);
         },
+        
         /*
         =====================================================================
         Favorites Commands
         =====================================================================
         */
+
+        /**
+        @method favorites_getFavorersOfListing
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         favorite_getFavorersOfListing: function(o,c) {
             if(!o.listing_id) { throw "listing_id null or undefined."; }
             var path = "listings/" + o.listing_id + "/favorers";
@@ -414,6 +556,12 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c);
         },
+        
+        /**
+        @method favorites_getFavorersOfShop
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         favorite_getFavorersOfShop: function(o,c) {
             if(!o.user_id) { throw "user_id null or undefined."; }
             var path = "shops/" + o.user_id + "/favorers";
@@ -421,6 +569,12 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c);
         },
+        
+        /**
+        @method favorites_getFavoriteListingsOfUser
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         favorite_getFavoriteListingsOfUser: function(o,c) {
             if(!o.user_id) { throw "user_id null or undefined."; }
             var path = "users/" + o.user_id + "/favorites/listings";
@@ -428,6 +582,12 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c);
         },
+        
+        /**
+        @method favorites_getFavoriteShopsOfUser
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         favorite_getFavoriteShopsOfUser: function(o,c) {
             if(!o.user_id) { throw "user_id null or undefined."; }
             var path = "users/" + o.user_id + "/favorites/shops";
@@ -435,15 +595,28 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c);
         },
+        
         /*
         =====================================================================
         Gift Guide Commands
         =====================================================================
         */
+        
+        /**
+        @method giftguide_getGiftGuides
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         giftguide_getGiftGuides: function(o,c) {
             var path = "gift-guides";
             this.api(path, o, c, false);
         },
+        
+        /**
+        @method giftguide_getGiftGuideListings
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         giftguide_getGuiftGuideListings: function(o,c) {
             if(!o.guide_id) { throw "guide_id null or undefined."; }
             var path = "gift-guides/" + o.guide_id + "/listings";
@@ -451,19 +624,38 @@ A module for interacting with the etsy public API
             
             this.api(path, o, c);
         },
+        
         /*
         =====================================================================
         Server Commands
         =====================================================================
         */
+        
+        /**
+        @method server_getMethodTable
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         server_getMethodTable: function(o,c) {
             var path = "";
             this.api(path, o, c);
         },
+        
+        /**
+        @method server_getServerEpoch
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         server_getServerEpoch: function(o,c) {
             var path = "server/epoch";
             this.api(path, o, c);
         },
+        
+        /**
+        @method server_ping
+        @param o {Object} The arguments object
+        @param c {Function|Object} The callback object/function
+        **/
         server_ping: function(o,c) {
             var path = "server/ping";
             this.api(path, o, c);
