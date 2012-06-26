@@ -1,5 +1,7 @@
 **NOTE:** This library is hideously out-of-date. It was the latest-greatest when I wrote it in 2009 or whatever, but the ETSY API has since gone from beta (when this was written) to v2.
 
+**[The generated JS documentation](./docs)**
+
 While messing around working on a friend's website, I realized that it would be relatively simple to whip up a Javascript client for [Etsy's excellent and simple API](http://developer.etsy.com/docs). It's mostly a set of function wrappers and pass-throughs for the built-in libraries, but aside from maybe wanting a lightweight object mapper (being able to call thisListing.getFavorites would be cool), that's all I really need.
 
 I decided that I'd release it out there onto the web so others can use it. It's license free--do whatever you want with it, although if you claim that you wrote it, you're going to a [special hell](http://www.youtube.com/watch?v=NVxLz6O6MaI).
